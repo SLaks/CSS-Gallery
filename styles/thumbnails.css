@@ -1,0 +1,165 @@
+.Button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+.Button:focus:before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+}
+.Gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 4px 0 0 4px;
+}
+label.Thumbnail {
+  height: 192px;
+  background-size: auto 192px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 4px 4px 0;
+}
+label.Thumbnail:after {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  display: block;
+  height: 32px;
+  font-size: 14px;
+  padding: 8px;
+  bottom: -32px;
+  left: 8px;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+label.Thumbnail:hover {
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.4) inset;
+}
+label.Thumbnail:hover:after {
+  bottom: 8px;
+}
+label.Thumbnail[for="photo-1"] {
+  background-image: url("../photos/Charles Babbage.jpg");
+  width: 150.86556169px;
+}
+label.Thumbnail[for="photo-1"]:after {
+  content: 'Charles Babbage';
+}
+label.Thumbnail[for="photo-2"] {
+  background-image: url("../photos/Tim Berners-Lee.jpg");
+  width: 288.18011257px;
+}
+label.Thumbnail[for="photo-2"]:after {
+  content: 'Tim Berners-Lee';
+}
+label.Thumbnail[for="photo-3"] {
+  background-image: url("../photos/Sergey Brin.jpg");
+  width: 288.45070423px;
+}
+label.Thumbnail[for="photo-3"]:after {
+  content: 'Sergey Brin';
+}
+label.Thumbnail[for="photo-4"] {
+  background-image: url("../photos/Vint Cerf.jpg");
+  width: 191.87508133px;
+}
+label.Thumbnail[for="photo-4"]:after {
+  content: 'Vint Cerf';
+}
+label.Thumbnail[for="photo-5"] {
+  background-image: url("../photos/Douglas Engelbart.jpg");
+  width: 149.43216413px;
+}
+label.Thumbnail[for="photo-5"]:after {
+  content: 'Douglas Engelbart';
+}
+label.Thumbnail[for="photo-6"] {
+  background-image: url("../photos/Shafi Goldwasser.jpg");
+  width: 192px;
+}
+label.Thumbnail[for="photo-6"]:after {
+  content: 'Shafi Goldwasser';
+}
+label.Thumbnail[for="photo-7"] {
+  background-image: url("../photos/Grace Hopper.jpg");
+  width: 153.6px;
+}
+label.Thumbnail[for="photo-7"]:after {
+  content: 'Grace Hopper';
+}
+label.Thumbnail[for="photo-8"] {
+  background-image: url("../photos/Steve Jobs.jpg");
+  width: 288.28152493px;
+}
+label.Thumbnail[for="photo-8"]:after {
+  content: 'Steve Jobs';
+}
+label.Thumbnail[for="photo-9"] {
+  background-image: url("../photos/Brian Kernighan.jpg");
+  width: 288.11254396px;
+}
+label.Thumbnail[for="photo-9"]:after {
+  content: 'Brian Kernighan';
+}
+label.Thumbnail[for="photo-10"] {
+  background-image: url("../photos/Barbara Liskov.jpg");
+  width: 128.064px;
+}
+label.Thumbnail[for="photo-10"]:after {
+  content: 'Barbara Liskov';
+}
+label.Thumbnail[for="photo-11"] {
+  background-image: url("../photos/Ada Lovelace.jpg");
+  width: 133.63784666px;
+}
+label.Thumbnail[for="photo-11"]:after {
+  content: 'Ada Lovelace';
+}
+label.Thumbnail[for="photo-12"] {
+  background-image: url("../photos/Dennis Ritchie.jpg");
+  width: 141.16872428px;
+}
+label.Thumbnail[for="photo-12"]:after {
+  content: 'Dennis Ritchie';
+}
+label.Thumbnail[for="photo-13"] {
+  background-image: url("../photos/Richard Stallman.jpg");
+  width: 256px;
+}
+label.Thumbnail[for="photo-13"]:after {
+  content: 'Richard Stallman';
+}
+label.Thumbnail[for="photo-14"] {
+  background-image: url("../photos/Bjarne Stroustrup.jpg");
+  width: 341.33333333px;
+}
+label.Thumbnail[for="photo-14"]:after {
+  content: 'Bjarne Stroustrup';
+}
+label.Thumbnail[for="photo-15"] {
+  background-image: url("../photos/Linus Torvalds.jpg");
+  width: 125.2173913px;
+}
+label.Thumbnail[for="photo-15"]:after {
+  content: 'Linus Torvalds';
+}
+
+/*# sourceMappingURL=thumbnails.css.map */

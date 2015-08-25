@@ -1,0 +1,23 @@
+﻿.Button {
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+
+	&:focus:before {
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		background: rgba(0,0,0, .4);
+	}
+}
+
+.LabelButton(@id) {
+	label[for="@{id}"]:extend(.Button) {
+	}
+
+	#@{id}:focus ~ .Root label[for="@{id}"]:extend(.Button:focus all) {
+	}
+}

@@ -1,0 +1,81 @@
+﻿@import '_variables';
+@import '_mixins';
+@import '_data';
+
+body, *:before, *:after {
+	font-family: 'PT Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body > input {
+	// Hide state inputs.
+	position: absolute;
+	opacity: 0;
+}
+
+label[for="hamburger-toggle"] {
+	user-select: none;
+	cursor: pointer;
+	margin-right:  16px;
+}
+
+header {
+	height: 64px;
+	padding: 0 16px;
+	background: #673AB7;
+	color: white;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
+	align-items: center;
+	display: flex;
+}
+
+.Hamburger {
+	@width: 256px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -@width;
+	width: @width;
+	transition: left @transition;
+	background-color: white;
+	z-index: 100;
+
+	box-shadow: 4px 0 10px 0 rgba(0,0,0,0.15);
+
+	a {
+		display: block;
+		background-color: white;
+		transition: background-color @transition;
+		padding: 16px;
+		color: black;
+		text-decoration: none;
+	
+		&:hover {
+			background-color: #D1C4E9;
+		}
+	}
+
+}
+.EachCategory({
+	#@{id}:target ~ .Root .Title:after {
+		content: @displayName;
+	}
+	a[href="#@{id}"]:after {
+		content: @displayName;
+	}
+
+	#@{id}:target ~ .Root a[href="#@{id}"] {
+		background-color: #9575CD;
+		font-weight: bold;
+	}
+});
+
+#hamburger-toggle:focus ~ .Root .Hamburger {
+	left: 0;
+}

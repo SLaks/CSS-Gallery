@@ -1,0 +1,28 @@
+{
+  "name": "css-gallery",
+  "version": "1.0.0",
+  "description": "Interactive browsable photo gallery in pure CSS",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-less": "^3.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-watch": "^4.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SLaks/CSS-Gallery.git"
+  },
+  "keywords": [
+    "less",
+    "css"
+  ],
+  "author": "SLaks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SLaks/CSS-Gallery/issues"
+  },
+  "homepage": "http://css-gallery.slaks.net/"
+}
