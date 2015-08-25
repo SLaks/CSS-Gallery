@@ -53,6 +53,33 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
+header .Spacer {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header label {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.87);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1;
+}
+header label:not(:first-child) {
+  margin-left: 16px;
+}
+header label:hover {
+  background-color: rgba(153, 153, 153, 0.2);
+}
+#view-thumbnail:checked ~ .Root header label[for="view-thumbnail"],
+#view-list:checked ~ .Root header label[for="view-list"] {
+  color: white;
+  background-color: rgba(153, 153, 153, 0.4);
+}
 .Hamburger {
   position: absolute;
   top: 0;

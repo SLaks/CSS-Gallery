@@ -21,7 +21,7 @@ body > input {
 label[for="hamburger-toggle"] {
 	user-select: none;
 	cursor: pointer;
-	margin-right:  16px;
+	margin-right: 16px;
 }
 
 header {
@@ -32,6 +32,35 @@ header {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
 	align-items: center;
 	display: flex;
+
+	.Spacer {
+		flex-grow: 1;
+	}
+
+	label {
+		&:not(:first-child) {
+			margin-left: 16px;
+		}
+
+		font-size: 16px;
+		padding: 8px;
+		border-radius: 4px;
+		cursor: pointer;
+		color: rgba(255,255,255, .87);
+		transition: background-color @transition, color @transition;
+		line-height: 1;
+
+
+		&:hover {
+			background-color: rgba(153, 153, 153, .2);
+		}
+
+		#view-thumbnail:checked ~ .Root &[for="view-thumbnail"],
+		#view-list:checked ~ .Root &[for="view-list"] {
+			color: white;
+			background-color: rgba(153, 153, 153, .4);
+		}
+	}
 }
 
 .Hamburger {
