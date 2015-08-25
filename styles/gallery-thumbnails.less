@@ -1,0 +1,57 @@
+﻿@import '_variables';
+@import '_mixins';
+@import '_data';
+
+@thumbnailHeight: 192px;
+@hoverShade: rgba(0,0,0, .4);
+@hoverShadeThickness: 8px;
+@hoverLabelHeight: 32px;
+
+#view-thumbnail:checked ~ .Root .Gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 4px 0 0 4px;
+	label {
+		height: @thumbnailHeight;
+		background-size: auto @thumbnailHeight;
+		display: block;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		transition: box-shadow @transition;
+		margin: 0 4px 4px 0;
+
+		&:after {
+			background: @hoverShade;
+			color: white;
+			font-weight: bold;
+			position: absolute;
+			display: block;
+			height: @hoverLabelHeight;
+			font-size: 14px;
+			padding: 8px;
+			bottom: -@hoverLabelHeight;
+			left: @hoverShadeThickness;
+			transition: bottom @transition;
+		}
+
+		&:hover {
+			box-shadow: 0 0 0 @hoverShadeThickness @hoverShade inset;
+
+			&:after {
+				bottom: @hoverShadeThickness;
+			}
+		}
+	}
+
+	.EachPhoto({
+		label[for="photo-@{index}"] {
+			background-image: url("../photos/@{fileName}");
+			width: @thumbnailHeight * (@width / @height);
+
+			&:after {
+				content: @name;
+			}
+		}
+	});
+}
