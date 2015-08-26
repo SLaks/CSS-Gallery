@@ -22,7 +22,7 @@ gulp.task('default', function () {
 });
 
 gulp.task('watch', function () {
-	watch('**/*.less', batch(function (events, done) {
+	watch('./styles/*.less', batch(function (events, done) {
 		gulp.start('default', done);
 	}));
 });
