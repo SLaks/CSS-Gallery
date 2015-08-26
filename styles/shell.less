@@ -10,6 +10,8 @@ body, *:before, *:after {
 html, body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
+	overflow: hidden;
 }
 
 body > input {
@@ -24,6 +26,12 @@ label[for="hamburger-toggle"] {
 	margin-right: 16px;
 }
 
+.Root {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 header {
 	height: 64px;
 	padding: 0 16px;
@@ -32,6 +40,7 @@ header {
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
 	align-items: center;
 	display: flex;
+	flex-shrink: 0;
 
 	.Spacer {
 		flex-grow: 1;
@@ -74,6 +83,7 @@ header {
 	transition: left @transition;
 	background-color: white;
 	z-index: 100;
+	overflow: auto;
 
 	box-shadow: 4px 0 10px 0 rgba(0,0,0,0.15);
 
@@ -91,6 +101,12 @@ header {
 	}
 
 }
+
+.Content {
+	overflow: auto;
+	flex-grow: 1;
+}
+
 .EachCategory({
 	#@{id}:target ~ .Root .Title:after {
 		content: @displayName;

@@ -25,6 +25,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 body > input {
   position: absolute;
@@ -37,6 +39,18 @@ label[for="hamburger-toggle"] {
           user-select: none;
   cursor: pointer;
   margin-right: 16px;
+}
+.Root {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 header {
   height: 64px;
@@ -52,6 +66,9 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 header .Spacer {
   -webkit-box-flex: 1;
@@ -90,6 +107,7 @@ header label:hover {
           transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: white;
   z-index: 100;
+  overflow: auto;
   box-shadow: 4px 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 .Hamburger a {
@@ -103,6 +121,13 @@ header label:hover {
 }
 .Hamburger a:hover {
   background-color: #D1C4E9;
+}
+.Content {
+  overflow: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 #all:target ~ .Root .Title:after {
   content: 'All';
