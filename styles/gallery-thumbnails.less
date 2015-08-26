@@ -3,7 +3,7 @@
 @import '_data';
 
 @thumbnailHeight: 192px;
-@hoverShade: rgba(0,0,0, .4);
+@hoverShade: rgba(0,0,0, .7);
 @hoverShadeThickness: 8px;
 @hoverLabelHeight: 32px;
 
@@ -28,10 +28,12 @@
 			position: absolute;
 			display: block;
 			height: @hoverLabelHeight;
-			font-size: 14px;
+			font-size: 16px;
+			line-height: 1;
 			padding: 8px;
 			bottom: -@hoverLabelHeight;
 			left: @hoverShadeThickness;
+			right: @hoverShadeThickness;
 			transition: bottom @transition;
 		}
 

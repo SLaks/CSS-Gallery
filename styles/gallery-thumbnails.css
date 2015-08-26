@@ -37,21 +37,23 @@
   margin: 0 4px 4px 0;
 }
 #view-thumbnail:checked ~ .Root .Gallery label:after {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-weight: bold;
   position: absolute;
   display: block;
   height: 32px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1;
   padding: 8px;
   bottom: -32px;
   left: 8px;
+  right: 8px;
   -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #view-thumbnail:checked ~ .Root .Gallery label:hover {
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.7) inset;
 }
 #view-thumbnail:checked ~ .Root .Gallery label:hover:after {
   bottom: 8px;
