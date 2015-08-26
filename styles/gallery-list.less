@@ -1,0 +1,57 @@
+﻿@import '_variables';
+@import '_mixins';
+@import '_data';
+
+@thumbnailHeight: 48px;
+@cellPadding: 8px;
+
+#view-list:checked ~ .Root .Gallery {
+	display: table;
+	width: 100%;
+
+	label {
+		display: table-row;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		transition: background-color @transition;
+
+		span {
+			display: table-cell;
+			border-bottom: 1px solid #333;
+			padding: @cellPadding;
+			vertical-align: middle;
+		}
+
+		span:first-child {
+			height: @thumbnailHeight + 2 * @cellPadding;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+
+		&:hover {
+			background-color: #D1C4E9;
+		}
+	}
+
+	.EachPhoto({
+		label[for="photo-@{index}"] {
+			span:first-child {
+				background-image: url("../photos/@{fileName}");
+				width: @thumbnailHeight * (@width / @height);
+				background-size: @thumbnailHeight * (@width / @height) @thumbnailHeight;
+			}
+			span:first-child + span:after {
+				content: @name;
+			}
+			span:first-child + span + span:after {
+				content: "@{width} × @{height}";
+			}
+			span:first-child + span + span + span:after {
+				content: @fileSize;
+			}
+		}
+	});
+}
