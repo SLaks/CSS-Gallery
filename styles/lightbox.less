@@ -1,0 +1,99 @@
+﻿@import '_variables';
+@import '_mixins';
+@import '_data';
+
+@dialogSpacing: 24px;
+
+#no-dialog:checked ~ .Root .LightboxShade {
+	display: none;
+}
+
+.LightboxShade {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0, .4);
+
+	> label[for=no-dialog] {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	.Lightbox {
+		background: white;
+		// Constrain the dialog to the width of the viewport.
+		// The dialog height is constrained below, per-photo.
+		max-width: 80%;
+		box-shadow: 0 0 4px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.12);
+		padding: @dialogSpacing;
+		display: flex;
+		flex-direction: column;
+
+		h1 {
+			display: flex;
+			flex-shrink: 0;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 500;
+			font-size: @dialogSpacing;
+			margin: 0;
+			margin-bottom: @dialogSpacing;
+
+			label {
+				flex-shrink: 0;
+				margin-left: 16px;
+				cursor: pointer;
+			}
+		}
+
+		.Photo {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.EachPhoto({
+	#photo-@{index}:checked ~ .Root .Lightbox {
+		// Constrain the dialog to the height of the viewport,
+		// setting the width in viewport-height units, scaled
+		// to the photo's aspect ratio plus header & padding.
+
+		@aspectRatio: @height / @width;
+
+		width: 100vh * (@width - 2 * @dialogSpacing) / (@height + 4 * @dialogSpacing);
+		width: calc(~'(80vh - 4 * @{dialogSpacing}) / @{aspectRatio} + 2 * @{dialogSpacing}');
+		// In browsers that support calc(), calculate the exact width that will result in
+		// the desired height (of 80vh).  This works because I can specify a height-based
+		// unit (vh) in the width calculation.  The padding-bottom for the photo will set
+		// the height based on this width. This formula is derived as follows: (height is
+		// the desired outer height of the dialog, specified in vh, and outerWidth is the
+		// value that this calculation sets; both include padding, thanks to box-sizing).
+
+		// height = (outerWidth - 2 * @dialogSpacing) * @aspectRatio + 4 * @dialogSpacing
+		// height - 4 * @dialogSpacing = (outerWidth - 2 * @dialogSpacing) * @aspectRatio
+		// (height - 4 * @dialogSpacing) / @aspectRatio = outerWidth - 2 * @dialogSpacing
+		// (height - 4 * @dialogSpacing) / @aspectRatio + 2 * @dialogSpacing = outerWidth
+
+		h1:before {
+			content: @name;
+		}
+
+		.Photo {
+			background-image: url("../photos/@{fileName}");
+			// Force the photo element to have an aspect ratio that matches the image.
+			padding-bottom: @aspectRatio * 100%;
+		}
+	}
+});

@@ -3,12 +3,16 @@
 <head>
 	<title>CSS Gallery</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="theme-color" content="#673AB7">
+	<meta name="msapplication-TileColor" content="#673AB7">
 	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,400bold" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<link href="styles/shell.css" rel="stylesheet" />
 	<link href="styles/gallery-thumbnails.css" rel="stylesheet" />
 	<link href="styles/gallery-list.css" rel="stylesheet" />
+	<link href="styles/lightbox.css" rel="stylesheet" />
 </head>
 <body>
 	<div id="all"></div>
@@ -151,6 +155,16 @@
 					<span></span>
 				</label>
 			</section>
+		</div>
+
+		<div class="LightboxShade">
+			<label for="no-dialog"></label>
+			<div class="Lightbox">
+				<h1>
+					<label for="no-dialog" class="material-icons">close</label>
+				</h1>
+				<div class="Photo"></div>
+			</div>
 		</div>
 	</div>
 
