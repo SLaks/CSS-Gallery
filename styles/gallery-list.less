@@ -23,11 +23,15 @@
 			vertical-align: middle;
 		}
 
-		span:first-child {
-			height: @thumbnailHeight + 2 * @cellPadding;
+		span:first-child:after {
+			content: '';
+			display: block;
+			height: @thumbnailHeight;
+			width: @thumbnailHeight;
 			background-position: center center;
 			background-repeat: no-repeat;
-			background-size: contain;
+			background-size: cover;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.87);
 		}
 
 
@@ -38,10 +42,8 @@
 
 	.EachPhoto({
 		label[for="photo-@{index}"] {
-			span:first-child {
+			span:first-child:after {
 				background-image: url("../photos/@{fileName}");
-				width: @thumbnailHeight * (@width / @height);
-				background-size: @thumbnailHeight * (@width / @height) @thumbnailHeight;
 			}
 			span:first-child + span:after {
 				content: @name;

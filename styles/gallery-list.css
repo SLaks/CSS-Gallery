@@ -33,19 +33,21 @@
   padding: 8px;
   vertical-align: middle;
 }
-#view-list:checked ~ .Root .Gallery label span:first-child {
-  height: 64px;
+#view-list:checked ~ .Root .Gallery label span:first-child:after {
+  content: '';
+  display: block;
+  height: 48px;
+  width: 48px;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.87);
 }
 #view-list:checked ~ .Root .Gallery label:hover {
   background-color: #D1C4E9;
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-1"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-1"] span:first-child:after {
   background-image: url("../photos/Charles Babbage.jpg");
-  width: 37.71639042px;
-  background-size: 37.71639042px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-1"] span:first-child + span:after {
   content: 'Charles Babbage';
@@ -56,10 +58,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-1"] span:first-child + span + span + span:after {
   content: '250.5 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-2"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-2"] span:first-child:after {
   background-image: url("../photos/Tim Berners-Lee.jpg");
-  width: 72.04502814px;
-  background-size: 72.04502814px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-2"] span:first-child + span:after {
   content: 'Tim Berners-Lee';
@@ -70,10 +70,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-2"] span:first-child + span + span + span:after {
   content: '497.1 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-3"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-3"] span:first-child:after {
   background-image: url("../photos/Sergey Brin.jpg");
-  width: 72.11267606px;
-  background-size: 72.11267606px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-3"] span:first-child + span:after {
   content: 'Sergey Brin';
@@ -84,10 +82,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-3"] span:first-child + span + span + span:after {
   content: '902.1 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-4"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-4"] span:first-child:after {
   background-image: url("../photos/Vint Cerf.jpg");
-  width: 47.96877033px;
-  background-size: 47.96877033px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-4"] span:first-child + span:after {
   content: 'Vint Cerf';
@@ -98,10 +94,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-4"] span:first-child + span + span + span:after {
   content: '278.8 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-5"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-5"] span:first-child:after {
   background-image: url("../photos/Douglas Engelbart.jpg");
-  width: 37.35804103px;
-  background-size: 37.35804103px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-5"] span:first-child + span:after {
   content: 'Douglas Engelbart';
@@ -112,10 +106,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-5"] span:first-child + span + span + span:after {
   content: '1.3 MB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-6"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-6"] span:first-child:after {
   background-image: url("../photos/Shafi Goldwasser.jpg");
-  width: 48px;
-  background-size: 48px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-6"] span:first-child + span:after {
   content: 'Shafi Goldwasser';
@@ -126,10 +118,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-6"] span:first-child + span + span + span:after {
   content: '1.1 MB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-7"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-7"] span:first-child:after {
   background-image: url("../photos/Grace Hopper.jpg");
-  width: 38.4px;
-  background-size: 38.4px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-7"] span:first-child + span:after {
   content: 'Grace Hopper';
@@ -140,10 +130,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-7"] span:first-child + span + span + span:after {
   content: '305 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-8"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-8"] span:first-child:after {
   background-image: url("../photos/Steve Jobs.jpg");
-  width: 72.07038123px;
-  background-size: 72.07038123px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-8"] span:first-child + span:after {
   content: 'Steve Jobs';
@@ -154,10 +142,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-8"] span:first-child + span + span + span:after {
   content: '158.6 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-9"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-9"] span:first-child:after {
   background-image: url("../photos/Brian Kernighan.jpg");
-  width: 72.02813599px;
-  background-size: 72.02813599px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-9"] span:first-child + span:after {
   content: 'Brian Kernighan';
@@ -168,10 +154,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-9"] span:first-child + span + span + span:after {
   content: '150.6 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-10"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-10"] span:first-child:after {
   background-image: url("../photos/Barbara Liskov.jpg");
-  width: 32.016px;
-  background-size: 32.016px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-10"] span:first-child + span:after {
   content: 'Barbara Liskov';
@@ -182,10 +166,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-10"] span:first-child + span + span + span:after {
   content: '291.6 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-11"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-11"] span:first-child:after {
   background-image: url("../photos/Ada Lovelace.jpg");
-  width: 33.40946166px;
-  background-size: 33.40946166px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-11"] span:first-child + span:after {
   content: 'Ada Lovelace';
@@ -196,10 +178,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-11"] span:first-child + span + span + span:after {
   content: '850.8 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-12"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-12"] span:first-child:after {
   background-image: url("../photos/Dennis Ritchie.jpg");
-  width: 35.29218107px;
-  background-size: 35.29218107px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-12"] span:first-child + span:after {
   content: 'Dennis Ritchie';
@@ -210,10 +190,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-12"] span:first-child + span + span + span:after {
   content: '305 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-13"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-13"] span:first-child:after {
   background-image: url("../photos/Richard Stallman.jpg");
-  width: 64px;
-  background-size: 64px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-13"] span:first-child + span:after {
   content: 'Richard Stallman';
@@ -224,10 +202,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-13"] span:first-child + span + span + span:after {
   content: '647.5 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-14"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-14"] span:first-child:after {
   background-image: url("../photos/Bjarne Stroustrup.jpg");
-  width: 85.33333333px;
-  background-size: 85.33333333px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-14"] span:first-child + span:after {
   content: 'Bjarne Stroustrup';
@@ -238,10 +214,8 @@
 #view-list:checked ~ .Root .Gallery label[for="photo-14"] span:first-child + span + span + span:after {
   content: '97.3 KB';
 }
-#view-list:checked ~ .Root .Gallery label[for="photo-15"] span:first-child {
+#view-list:checked ~ .Root .Gallery label[for="photo-15"] span:first-child:after {
   background-image: url("../photos/Linus Torvalds.jpg");
-  width: 31.30434783px;
-  background-size: 31.30434783px 48px;
 }
 #view-list:checked ~ .Root .Gallery label[for="photo-15"] span:first-child + span:after {
   content: 'Linus Torvalds';
