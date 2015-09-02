@@ -5,7 +5,19 @@
 @dialogSpacing: 24px;
 
 #no-dialog:checked ~ .Root .LightboxShade {
-	display: none;
+	// This selector sets the base state, which
+	// is transitioned to the open state below.
+	background-color: transparent;
+	pointer-events: none;
+
+	.Lightbox {
+		opacity: 0;
+		transform: scale(.7);
+	}
+
+	> label[for=no-dialog] {
+		display: none;
+	}
 }
 
 .LightboxShade {
@@ -17,9 +29,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(0,0,0, .4);
+	background-color: rgba(0,0,0, .4);
+
+	pointer-events: auto;
+
+	transition: background-color @transition;
 
 	> label[for=no-dialog] {
+		display: block;
 		cursor: pointer;
 		position: absolute;
 		top: 0;
@@ -38,6 +55,9 @@
 		padding: @dialogSpacing;
 		display: flex;
 		flex-direction: column;
+		transform: scale(1);
+		opacity: 1;
+		transition: transform @transition, opacity @transition;
 
 		h1 {
 			display: flex;
