@@ -79,8 +79,13 @@
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: -48.45360825vh;
+  width: calc((80vh - 4 * 24px) / 1 + 2 * 24px);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s;
+}
+.LightboxShade .Lightbox .Photo {
+  padding-bottom: 100%;
 }
 .LightboxShade .Lightbox h1 {
   display: -webkit-box;
@@ -114,171 +119,203 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #photo-1:checked ~ .Root .Lightbox {
   width: 71.42028986vh;
   width: calc((80vh - 4 * 24px) / 1.27265625 + 2 * 24px);
+}
+#photo-1:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 127.265625%;
 }
 #photo-1:checked ~ .Root .Lightbox h1:before {
   content: 'Charles Babbage';
 }
 #photo-1:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Charles Babbage.jpg");
-  padding-bottom: 127.265625%;
 }
 #photo-2:checked ~ .Root .Lightbox {
   width: 133.56282272vh;
   width: calc((80vh - 4 * 24px) / 0.66625 + 2 * 24px);
+}
+#photo-2:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 66.625%;
 }
 #photo-2:checked ~ .Root .Lightbox h1:before {
   content: 'Tim Berners-Lee';
 }
 #photo-2:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Tim Berners-Lee.jpg");
-  padding-bottom: 66.625%;
 }
 #photo-3:checked ~ .Root .Lightbox {
   width: 136.24454148vh;
   width: calc((80vh - 4 * 24px) / 0.665625 + 2 * 24px);
+}
+#photo-3:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 66.5625%;
 }
 #photo-3:checked ~ .Root .Lightbox h1:before {
   content: 'Sergey Brin';
 }
 #photo-3:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Sergey Brin.jpg");
-  padding-bottom: 66.5625%;
 }
 #photo-4:checked ~ .Root .Lightbox {
   width: 91.12063686vh;
   width: calc((80vh - 4 * 24px) / 1.0006510416666667 + 2 * 24px);
+}
+#photo-4:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 100.06510417%;
 }
 #photo-4:checked ~ .Root .Lightbox h1:before {
   content: 'Vint Cerf';
 }
 #photo-4:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Vint Cerf.jpg");
-  padding-bottom: 100.06510417%;
 }
 #photo-5:checked ~ .Root .Lightbox {
   width: 70.19290604vh;
   width: calc((80vh - 4 * 24px) / 1.2848639455782314 + 2 * 24px);
+}
+#photo-5:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 128.48639456%;
 }
 #photo-5:checked ~ .Root .Lightbox h1:before {
   content: 'Douglas Engelbart';
 }
 #photo-5:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Douglas Engelbart.jpg");
-  padding-bottom: 128.48639456%;
 }
 #photo-6:checked ~ .Root .Lightbox {
   width: 86.16714697vh;
   width: calc((80vh - 4 * 24px) / 1 + 2 * 24px);
+}
+#photo-6:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 100%;
 }
 #photo-6:checked ~ .Root .Lightbox h1:before {
   content: 'Shafi Goldwasser';
 }
 #photo-6:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Shafi Goldwasser.jpg");
-  padding-bottom: 100%;
 }
 #photo-7:checked ~ .Root .Lightbox {
   width: 72.64150943vh;
   width: calc((80vh - 4 * 24px) / 1.25 + 2 * 24px);
+}
+#photo-7:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 125%;
 }
 #photo-7:checked ~ .Root .Lightbox h1:before {
   content: 'Grace Hopper';
 }
 #photo-7:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Grace Hopper.jpg");
-  padding-bottom: 125%;
 }
 #photo-8:checked ~ .Root .Lightbox {
   width: 125.44987147vh;
   width: calc((80vh - 4 * 24px) / 0.666015625 + 2 * 24px);
+}
+#photo-8:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 66.6015625%;
 }
 #photo-8:checked ~ .Root .Lightbox h1:before {
   content: 'Steve Jobs';
 }
 #photo-8:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Steve Jobs.jpg");
-  padding-bottom: 66.6015625%;
 }
 #photo-9:checked ~ .Root .Lightbox {
   width: 129.82086407vh;
   width: calc((80vh - 4 * 24px) / 0.66640625 + 2 * 24px);
+}
+#photo-9:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 66.640625%;
 }
 #photo-9:checked ~ .Root .Lightbox h1:before {
   content: 'Brian Kernighan';
 }
 #photo-9:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Brian Kernighan.jpg");
-  padding-bottom: 66.640625%;
 }
 #photo-10:checked ~ .Root .Lightbox {
   width: 56.47810219vh;
   width: calc((80vh - 4 * 24px) / 1.4992503748125936 + 2 * 24px);
+}
+#photo-10:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 149.92503748%;
 }
 #photo-10:checked ~ .Root .Lightbox h1:before {
   content: 'Barbara Liskov';
 }
 #photo-10:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Barbara Liskov.jpg");
-  padding-bottom: 149.92503748%;
 }
 #photo-11:checked ~ .Root .Lightbox {
   width: 63.66925065vh;
   width: calc((80vh - 4 * 24px) / 1.43671875 + 2 * 24px);
+}
+#photo-11:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 143.671875%;
 }
 #photo-11:checked ~ .Root .Lightbox h1:before {
   content: 'Ada Lovelace';
 }
 #photo-11:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Ada Lovelace.jpg");
-  padding-bottom: 143.671875%;
 }
 #photo-12:checked ~ .Root .Lightbox {
   width: 59.15151515vh;
   width: calc((80vh - 4 * 24px) / 1.3600746268656716 + 2 * 24px);
+}
+#photo-12:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 136.00746269%;
 }
 #photo-12:checked ~ .Root .Lightbox h1:before {
   content: 'Dennis Ritchie';
 }
 #photo-12:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Dennis Ritchie.jpg");
-  padding-bottom: 136.00746269%;
 }
 #photo-13:checked ~ .Root .Lightbox {
   width: 121.875vh;
   width: calc((80vh - 4 * 24px) / 0.75 + 2 * 24px);
+}
+#photo-13:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 75%;
 }
 #photo-13:checked ~ .Root .Lightbox h1:before {
   content: 'Richard Stallman';
 }
 #photo-13:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Richard Stallman.jpg");
-  padding-bottom: 75%;
 }
 #photo-14:checked ~ .Root .Lightbox {
   width: 159.18367347vh;
   width: calc((80vh - 4 * 24px) / 0.5625 + 2 * 24px);
+}
+#photo-14:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 56.25%;
 }
 #photo-14:checked ~ .Root .Lightbox h1:before {
   content: 'Bjarne Stroustrup';
 }
 #photo-14:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Bjarne Stroustrup.jpg");
-  padding-bottom: 56.25%;
 }
 #photo-15:checked ~ .Root .Lightbox {
   width: 54.33070866vh;
   width: calc((80vh - 4 * 24px) / 1.5333333333333334 + 2 * 24px);
+}
+#photo-15:checked ~ .Root .Lightbox .Photo {
+  padding-bottom: 153.33333333%;
 }
 #photo-15:checked ~ .Root .Lightbox h1:before {
   content: 'Linus Torvalds';
 }
 #photo-15:checked ~ .Root .Lightbox .Photo {
   background-image: url("../photos/Linus Torvalds.jpg");
-  padding-bottom: 153.33333333%;
 }
 
 /*# sourceMappingURL=lightbox.css.map */
