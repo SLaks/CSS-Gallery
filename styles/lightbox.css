@@ -116,11 +116,169 @@
   cursor: pointer;
 }
 .LightboxShade .Lightbox .Photo {
+  position: relative;
+  box-sizing: content-box;
+  height: 0;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transition: padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.LeftArrow,
+.RightArrow,
+#photo-1:checked ~ .Root .Lightbox .Photo label[for="photo-2"],
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-1"],
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-3"],
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-2"],
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-4"],
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-3"],
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-5"],
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-4"],
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-6"],
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-5"],
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-7"],
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-6"],
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-8"],
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-7"],
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-9"],
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-8"],
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-10"],
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-9"],
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-11"],
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-10"],
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-12"],
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-11"],
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-13"],
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-12"],
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-14"],
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-13"],
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-15"],
+#photo-15:checked ~ .Root .Lightbox .Photo label[for="photo-14"] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.54);
+  color: white;
+  opacity: 0;
+  font-size: 48px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.LeftArrow:hover,
+.RightArrow:hover,
+#photo-1:checked ~ .Root .Lightbox .Photo label[for="photo-2"]:hover,
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-1"]:hover,
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-3"]:hover,
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-2"]:hover,
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-4"]:hover,
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-3"]:hover,
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-5"]:hover,
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-4"]:hover,
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-6"]:hover,
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-5"]:hover,
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-7"]:hover,
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-6"]:hover,
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-8"]:hover,
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-7"]:hover,
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-9"]:hover,
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-8"]:hover,
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-10"]:hover,
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-9"]:hover,
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-11"]:hover,
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-10"]:hover,
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-12"]:hover,
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-11"]:hover,
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-13"]:hover,
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-12"]:hover,
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-14"]:hover,
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-13"]:hover,
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-15"]:hover,
+#photo-15:checked ~ .Root .Lightbox .Photo label[for="photo-14"]:hover {
+  opacity: 1;
+}
+.LeftArrow,
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-1"],
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-2"],
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-3"],
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-4"],
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-5"],
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-6"],
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-7"],
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-8"],
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-9"],
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-10"],
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-11"],
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-12"],
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-13"],
+#photo-15:checked ~ .Root .Lightbox .Photo label[for="photo-14"] {
+  left: 0;
+}
+.LeftArrow:after,
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-1"]:after,
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-2"]:after,
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-3"]:after,
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-4"]:after,
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-5"]:after,
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-6"]:after,
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-7"]:after,
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-8"]:after,
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-9"]:after,
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-10"]:after,
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-11"]:after,
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-12"]:after,
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-13"]:after,
+#photo-15:checked ~ .Root .Lightbox .Photo label[for="photo-14"]:after {
+  content: 'chevron_left';
+}
+.RightArrow,
+#photo-1:checked ~ .Root .Lightbox .Photo label[for="photo-2"],
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-3"],
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-4"],
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-5"],
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-6"],
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-7"],
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-8"],
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-9"],
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-10"],
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-11"],
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-12"],
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-13"],
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-14"],
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-15"] {
+  right: 0;
+}
+.RightArrow:after,
+#photo-1:checked ~ .Root .Lightbox .Photo label[for="photo-2"]:after,
+#photo-2:checked ~ .Root .Lightbox .Photo label[for="photo-3"]:after,
+#photo-3:checked ~ .Root .Lightbox .Photo label[for="photo-4"]:after,
+#photo-4:checked ~ .Root .Lightbox .Photo label[for="photo-5"]:after,
+#photo-5:checked ~ .Root .Lightbox .Photo label[for="photo-6"]:after,
+#photo-6:checked ~ .Root .Lightbox .Photo label[for="photo-7"]:after,
+#photo-7:checked ~ .Root .Lightbox .Photo label[for="photo-8"]:after,
+#photo-8:checked ~ .Root .Lightbox .Photo label[for="photo-9"]:after,
+#photo-9:checked ~ .Root .Lightbox .Photo label[for="photo-10"]:after,
+#photo-10:checked ~ .Root .Lightbox .Photo label[for="photo-11"]:after,
+#photo-11:checked ~ .Root .Lightbox .Photo label[for="photo-12"]:after,
+#photo-12:checked ~ .Root .Lightbox .Photo label[for="photo-13"]:after,
+#photo-13:checked ~ .Root .Lightbox .Photo label[for="photo-14"]:after,
+#photo-14:checked ~ .Root .Lightbox .Photo label[for="photo-15"]:after {
+  content: 'chevron_right';
 }
 #photo-1:checked ~ .Root .Lightbox {
   width: 71.42028986vh;

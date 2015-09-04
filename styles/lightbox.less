@@ -30,9 +30,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: rgba(0,0,0, .4);
-
 	pointer-events: auto;
-
 	transition: background-color @transition;
 
 	> label[for=no-dialog] {
@@ -79,6 +77,9 @@
 		}
 
 		.Photo {
+			position: relative;
+			box-sizing: content-box;
+			height: 0;
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -113,6 +114,41 @@
 	}
  }
 
+.LeftArrow, .RightArrow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	background: rgba(0,0,0, .54);
+	color: white;
+	opacity: 0;
+	font-size: 48px;
+	transition: opacity @transition;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.LeftArrow {
+	left: 0;
+	&:after {
+		content: 'chevron_left';
+	}
+}
+
+.RightArrow {
+	right: 0;
+	&:after {
+		content: 'chevron_right';
+	}
+}
+
 .EachPhoto({
 	#photo-@{index}:checked ~ .Root .Lightbox {
 		.PhotoSize(@width, @height);
@@ -124,6 +160,11 @@
 
 		.Photo {
 			background-image: url("../photos/@{fileName}");
+
+			@leftIndex: @index - 1;
+			@rightIndex: @index + 1;
+			label[for="photo-@{leftIndex}"]:extend(.LeftArrow all) when (@index > 1) {}
+			label[for="photo-@{rightIndex}"]:extend(.RightArrow all) when (@index < @count) {}
 		}
 	}
 });

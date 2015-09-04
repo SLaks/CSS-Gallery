@@ -15,10 +15,16 @@
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
 }
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+*:before,
+*:after {
+  font-family: inherit;
+}
 body,
 *:before,
 *:after {
-  font-family: 'PT Sans', sans-serif;
   box-sizing: border-box;
 }
 html,

@@ -2,8 +2,14 @@
 @import '_mixins';
 @import '_data';
 
-body, *:before, *:after {
+body {
 	font-family: 'PT Sans', sans-serif;
+}
+*:before, *:after {
+	font-family: inherit;
+}
+
+body, *:before, *:after {
 	box-sizing: border-box;
 }
 
