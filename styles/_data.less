@@ -1,31 +1,33 @@
 ﻿.EachCategory(@cb) {
 	.Callback(@id, @displayName) { @cb(); }
 
+	// These IDs must have corresponding <div>s and <a>s in the HTML.
 	.Callback(all,			'All');
 	.Callback(networking,	'Networking');
 	.Callback(languages,	'Languages');
 	.Callback(software,		'Software');
+	.Callback(algorithms,	'Algorithms');
 	.Callback(hardware,		'Hardware');
 }
 
 .EachPhoto(@cb) {
-	.Callback(@index, @fileName, @name, @width, @height, @fileSize) { @cb(); }
+	.Callback(@index, @fileName, @name, @width, @height, @fileSize, @categories) { @cb(); }
 
-	.Callback(1,  'Charles Babbage.jpg',	'Charles Babbage',		1280, 1629,	'250.5 KB'	);
-	.Callback(2,  'Tim Berners-Lee.jpg',	'Tim Berners-Lee',		1600, 1066,	'497.1 KB'	);
-	.Callback(3,  'Sergey Brin.jpg',		'Sergey Brin',			1920, 1278,	'902.1 KB'	);
-	.Callback(4,  'Vint Cerf.jpg',			'Vint Cerf',			1536, 1537,	'278.8 KB'	);
-	.Callback(5,  'Douglas Engelbart.jpg',	'Douglas Engelbart',	1176, 1511,	'1.3 MB'	);
-	.Callback(6,  'Shafi Goldwasser.jpg',	'Shafi Goldwasser',		945, 945,	'1.1 MB'	);
-	.Callback(7,  'Grace Hopper.jpg',		'Grace Hopper',			1280, 1600,	'305 KB'	);
-	.Callback(8,  'Steve Jobs.jpg',			'Steve Jobs',			1024, 682,	'158.6 KB'	);
-	.Callback(9,  'Brian Kernighan.jpg',	'Brian Kernighan',		1280, 853,	'150.6 KB'	);
-	.Callback(10, 'Barbara Liskov.jpg',		'Barbara Liskov',		667, 1000,	'291.6 KB'	);
-	.Callback(11, 'Ada Lovelace.jpg',		'Ada Lovelace',			1280, 1839,	'850.8 KB'	);
-	.Callback(12, 'Dennis Ritchie.jpg',		'Dennis Ritchie',		536, 729,	'305 KB'	);
-	.Callback(13, 'Richard Stallman.jpg',	'Richard Stallman',		1920, 1440,	'647.5 KB'	);
-	.Callback(14, 'Bjarne Stroustrup.jpg',	'Bjarne Stroustrup',	1920, 1080,	'97.3 KB'	);
-	.Callback(15, 'Linus Torvalds.jpg',		'Linus Torvalds',		600, 920,	'95.3 KB'	);
+	.Callback(1,  'Charles Babbage.jpg',	'Charles Babbage',		1280, 1629,	'250.5 KB',	hardware);
+	.Callback(2,  'Tim Berners-Lee.jpg',	'Tim Berners-Lee',		1600, 1066,	'497.1 KB',	networking software);
+	.Callback(3,  'Sergey Brin.jpg',		'Sergey Brin',			1920, 1278,	'902.1 KB',	software algorithms);
+	.Callback(4,  'Vint Cerf.jpg',			'Vint Cerf',			1536, 1537,	'278.8 KB',	networking software);
+	.Callback(5,  'Douglas Engelbart.jpg',	'Douglas Engelbart',	1176, 1511,	'1.3 MB',	hardware software);
+	.Callback(6,  'Shafi Goldwasser.jpg',	'Shafi Goldwasser',		945, 945,	'1.1 MB',	software algorithms);
+	.Callback(7,  'Grace Hopper.jpg',		'Grace Hopper',			1280, 1600,	'305 KB',	languages software);
+	.Callback(8,  'Steve Jobs.jpg',			'Steve Jobs',			1024, 682,	'158.6 KB',	hardware software);
+	.Callback(9,  'Brian Kernighan.jpg',	'Brian Kernighan',		1280, 853,	'150.6 KB',	languages);
+	.Callback(10, 'Barbara Liskov.jpg',		'Barbara Liskov',		667, 1000,	'291.6 KB',	software algorithms);
+	.Callback(11, 'Ada Lovelace.jpg',		'Ada Lovelace',			1280, 1839,	'850.8 KB',	software algorithms);
+	.Callback(12, 'Dennis Ritchie.jpg',		'Dennis Ritchie',		536, 729,	'305 KB',	languages);
+	.Callback(13, 'Richard Stallman.jpg',	'Richard Stallman',		1920, 1440,	'647.5 KB',	software);
+	.Callback(14, 'Bjarne Stroustrup.jpg',	'Bjarne Stroustrup',	1920, 1080,	'97.3 KB',	languages);
+	.Callback(15, 'Linus Torvalds.jpg',		'Linus Torvalds',		600, 920,	'95.3 KB',	software);
 
 	@count: 15;
 }

@@ -175,6 +175,16 @@ a[href="#software"]:after {
   background-color: #9575CD;
   font-weight: bold;
 }
+#algorithms:target ~ .Root .Title:after {
+  content: 'Algorithms';
+}
+a[href="#algorithms"]:after {
+  content: 'Algorithms';
+}
+#algorithms:target ~ .Root a[href="#algorithms"] {
+  background-color: #9575CD;
+  font-weight: bold;
+}
 #hardware:target ~ .Root .Title:after {
   content: 'Hardware';
 }
