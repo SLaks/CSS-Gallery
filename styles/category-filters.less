@@ -1,0 +1,57 @@
+﻿@import '_variables';
+@import '_mixins';
+@import '_data';
+
+// I apply transitions when showing and hiding items to
+// match the filter. To make this work, I render hidden
+// items as zero width/height, and animate them to full
+// size when shown. This takes different CSS properties
+// applied to different elements for each view.  <span>
+// elements are only used in list view.  The properties 
+// of the root <label> elements only apply to thumbnail
+// view, since they're displayed as table rows for list
+// view, and those ignore most properties.
+
+.Gallery > label {
+	// For thumbnail view, animate the width of the thumbnail.
+	max-width: 0;
+	margin: 0;
+
+	// For list view, animate the height of the cells in the row.
+	span {
+		padding: 0;
+		transition: padding @transition;
+
+		&:after {
+			overflow: hidden;
+			display: block;
+			max-height: 0;
+			transition: max-height @transition;
+		}
+	}
+}
+
+.ShownPhoto {
+	// For thumbnail view
+	max-width: 500px;
+	margin: 0 4px 4px 0;
+
+	// For list view
+	span {
+		border-bottom: 1px solid #333;
+		padding: @cellPadding;
+
+		&:after {
+			max-height: @cellThumbnailHeight;
+			//display: table-cell;
+		}
+	}
+}
+
+#all:target ~ .Root .Gallery > label:extend(.ShownPhoto all) {}
+
+.EachPhoto({
+	.EachOwnCategory({
+		#@{id}:target ~ .Root .Gallery > label[for="photo-@{index}"]:extend(.ShownPhoto all) {}
+	});
+});

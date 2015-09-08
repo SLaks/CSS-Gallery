@@ -32,9 +32,8 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0 4px 4px 0;
+  -webkit-transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #view-thumbnail:checked ~ .Root .Gallery label:after {
   background: rgba(0, 0, 0, 0.7);

@@ -1,0 +1,121 @@
+.Button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+.Button:focus:before {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+}
+.Gallery > label {
+  max-width: 0;
+  margin: 0;
+}
+.Gallery > label span {
+  padding: 0;
+  -webkit-transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Gallery > label span:after {
+  overflow: hidden;
+  display: block;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ShownPhoto,
+#all:target ~ .Root .Gallery > label,
+#hardware:target ~ .Root .Gallery > label[for="photo-1"],
+#networking:target ~ .Root .Gallery > label[for="photo-2"],
+#software:target ~ .Root .Gallery > label[for="photo-2"],
+#software:target ~ .Root .Gallery > label[for="photo-3"],
+#algorithms:target ~ .Root .Gallery > label[for="photo-3"],
+#networking:target ~ .Root .Gallery > label[for="photo-4"],
+#software:target ~ .Root .Gallery > label[for="photo-4"],
+#hardware:target ~ .Root .Gallery > label[for="photo-5"],
+#software:target ~ .Root .Gallery > label[for="photo-5"],
+#software:target ~ .Root .Gallery > label[for="photo-6"],
+#algorithms:target ~ .Root .Gallery > label[for="photo-6"],
+#languages:target ~ .Root .Gallery > label[for="photo-7"],
+#software:target ~ .Root .Gallery > label[for="photo-7"],
+#hardware:target ~ .Root .Gallery > label[for="photo-8"],
+#software:target ~ .Root .Gallery > label[for="photo-8"],
+#languages:target ~ .Root .Gallery > label[for="photo-9"],
+#software:target ~ .Root .Gallery > label[for="photo-10"],
+#algorithms:target ~ .Root .Gallery > label[for="photo-10"],
+#software:target ~ .Root .Gallery > label[for="photo-11"],
+#algorithms:target ~ .Root .Gallery > label[for="photo-11"],
+#languages:target ~ .Root .Gallery > label[for="photo-12"],
+#software:target ~ .Root .Gallery > label[for="photo-13"],
+#languages:target ~ .Root .Gallery > label[for="photo-14"],
+#software:target ~ .Root .Gallery > label[for="photo-15"] {
+  max-width: 500px;
+  margin: 0 4px 4px 0;
+}
+.ShownPhoto span,
+#all:target ~ .Root .Gallery > label span,
+#hardware:target ~ .Root .Gallery > label[for="photo-1"] span,
+#networking:target ~ .Root .Gallery > label[for="photo-2"] span,
+#software:target ~ .Root .Gallery > label[for="photo-2"] span,
+#software:target ~ .Root .Gallery > label[for="photo-3"] span,
+#algorithms:target ~ .Root .Gallery > label[for="photo-3"] span,
+#networking:target ~ .Root .Gallery > label[for="photo-4"] span,
+#software:target ~ .Root .Gallery > label[for="photo-4"] span,
+#hardware:target ~ .Root .Gallery > label[for="photo-5"] span,
+#software:target ~ .Root .Gallery > label[for="photo-5"] span,
+#software:target ~ .Root .Gallery > label[for="photo-6"] span,
+#algorithms:target ~ .Root .Gallery > label[for="photo-6"] span,
+#languages:target ~ .Root .Gallery > label[for="photo-7"] span,
+#software:target ~ .Root .Gallery > label[for="photo-7"] span,
+#hardware:target ~ .Root .Gallery > label[for="photo-8"] span,
+#software:target ~ .Root .Gallery > label[for="photo-8"] span,
+#languages:target ~ .Root .Gallery > label[for="photo-9"] span,
+#software:target ~ .Root .Gallery > label[for="photo-10"] span,
+#algorithms:target ~ .Root .Gallery > label[for="photo-10"] span,
+#software:target ~ .Root .Gallery > label[for="photo-11"] span,
+#algorithms:target ~ .Root .Gallery > label[for="photo-11"] span,
+#languages:target ~ .Root .Gallery > label[for="photo-12"] span,
+#software:target ~ .Root .Gallery > label[for="photo-13"] span,
+#languages:target ~ .Root .Gallery > label[for="photo-14"] span,
+#software:target ~ .Root .Gallery > label[for="photo-15"] span {
+  border-bottom: 1px solid #333;
+  padding: 8px;
+}
+.ShownPhoto span:after,
+#all:target ~ .Root .Gallery > label span:after,
+#hardware:target ~ .Root .Gallery > label[for="photo-1"] span:after,
+#networking:target ~ .Root .Gallery > label[for="photo-2"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-2"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-3"] span:after,
+#algorithms:target ~ .Root .Gallery > label[for="photo-3"] span:after,
+#networking:target ~ .Root .Gallery > label[for="photo-4"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-4"] span:after,
+#hardware:target ~ .Root .Gallery > label[for="photo-5"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-5"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-6"] span:after,
+#algorithms:target ~ .Root .Gallery > label[for="photo-6"] span:after,
+#languages:target ~ .Root .Gallery > label[for="photo-7"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-7"] span:after,
+#hardware:target ~ .Root .Gallery > label[for="photo-8"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-8"] span:after,
+#languages:target ~ .Root .Gallery > label[for="photo-9"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-10"] span:after,
+#algorithms:target ~ .Root .Gallery > label[for="photo-10"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-11"] span:after,
+#algorithms:target ~ .Root .Gallery > label[for="photo-11"] span:after,
+#languages:target ~ .Root .Gallery > label[for="photo-12"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-13"] span:after,
+#languages:target ~ .Root .Gallery > label[for="photo-14"] span:after,
+#software:target ~ .Root .Gallery > label[for="photo-15"] span:after {
+  max-height: 48px;
+}
+
+/*# sourceMappingURL=category-filters.css.map */

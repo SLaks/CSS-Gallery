@@ -2,7 +2,6 @@
 @import '_mixins';
 @import '_data';
 
-@thumbnailHeight: 192px;
 @hoverShade: rgba(0,0,0, .7);
 @hoverShadeThickness: 8px;
 @hoverLabelHeight: 32px;
@@ -14,12 +13,13 @@
 	label {
 		height: @thumbnailHeight;
 		background-size: auto @thumbnailHeight;
+		// The margin is set in category-filters.less for visible items only.
 		display: block;
 		cursor: pointer;
 		position: relative;
 		overflow: hidden;
-		transition: box-shadow @transition;
-		margin: 0 4px 4px 0;
+		// The max-width is set in category-filters.less to transition items that match the filter.
+		transition: max-width @transition, box-shadow @transition;
 
 		&:after {
 			background: @hoverShade;

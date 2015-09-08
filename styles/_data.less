@@ -11,7 +11,16 @@
 }
 
 .EachPhoto(@cb) {
-	.Callback(@index, @fileName, @name, @width, @height, @fileSize, @categories) { @cb(); }
+	.Callback(@index, @fileName, @name, @width, @height, @fileSize, @categories) { 
+		@cb(); 
+		.EachOwnCategory(@cb, @i: 1) {
+			@id: extract(@categories, @i);
+			@cb();
+		}
+		.EachOwnCategory(@cb, @i: 1) when (@i < length(@categories)) {
+			.EachOwnCategory(@cb, @i + 1);
+		}
+	}
 
 	.Callback(1,  'Charles Babbage.jpg',	'Charles Babbage',		1280, 1629,	'250.5 KB',	hardware);
 	.Callback(2,  'Tim Berners-Lee.jpg',	'Tim Berners-Lee',		1600, 1066,	'497.1 KB',	networking software);

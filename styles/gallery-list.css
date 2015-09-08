@@ -29,9 +29,10 @@
 }
 #view-list:checked ~ .Root .Gallery label span {
   display: table-cell;
-  border-bottom: 1px solid #333;
-  padding: 8px;
   vertical-align: middle;
+}
+#view-list:checked ~ .Root .Gallery label span:first-child {
+  width: 48px;
 }
 #view-list:checked ~ .Root .Gallery label span:first-child:after {
   content: '';

@@ -2,9 +2,6 @@
 @import '_mixins';
 @import '_data';
 
-@thumbnailHeight: 48px;
-@cellPadding: 8px;
-
 #view-list:checked ~ .Root .Gallery {
 	display: table;
 	width: 100%;
@@ -16,18 +13,21 @@
 		overflow: hidden;
 		transition: background-color @transition;
 
+		// The height, padding, & border are set in category-filters.less for visible rows only.
 		span {
 			display: table-cell;
-			border-bottom: 1px solid #333;
-			padding: @cellPadding;
 			vertical-align: middle;
+		}
+
+		span:first-child {
+			width: @cellThumbnailHeight;
 		}
 
 		span:first-child:after {
 			content: '';
 			display: block;
-			height: @thumbnailHeight;
-			width: @thumbnailHeight;
+			height: @cellThumbnailHeight;
+			width: @cellThumbnailHeight;
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
