@@ -16,12 +16,12 @@
 	<link href="styles/lightbox.css" rel="stylesheet" />
 </head>
 <body>
-	<div id="all"></div>
-	<div id="networking"></div>
-	<div id="languages"></div>
-	<div id="software"></div>
-	<div id="algorithms"></div>
-	<div id="hardware"></div>
+	<div class="CategoryTarget" id="all"></div>
+	<div class="CategoryTarget" id="networking"></div>
+	<div class="CategoryTarget" id="languages"></div>
+	<div class="CategoryTarget" id="software"></div>
+	<div class="CategoryTarget" id="algorithms"></div>
+	<div class="CategoryTarget" id="hardware"></div>
 
 	<input type="radio" id="hamburger-toggle" />	<!-- This is only used for :focus. -->
 
@@ -56,6 +56,8 @@
 		</header>
 
 		<nav class="Hamburger">
+			<a href="#">About</a>
+			<div class="Separator"></div>
 			<a href="#all"></a>
 			<a href="#networking"></a>
 			<a href="#languages"></a>
@@ -64,8 +66,11 @@
 			<a href="#hardware"></a>
 		</nav>
 
-		<!-- Emmet expression: section.Gallery>label[for=photo-$]*15>span*4 -->
 		<div class="Content">
+			<div class="AboutPage">
+				<h1>Welcome!</h1>
+			</div>
+			<!-- Emmet expression: section.Gallery>label[for=photo-$]*15>span*4 -->
 			<section class="Gallery">
 				<label for="photo-1">
 					<span></span>
