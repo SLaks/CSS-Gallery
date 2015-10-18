@@ -147,60 +147,72 @@ header label:hover {
 #all:target ~ .Root .Title:after {
   content: 'All';
 }
-a[href="#all"]:after {
+.Hamburger a[href="#all"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#all"]:after {
   content: 'All';
 }
-#all:target ~ .Root a[href="#all"] {
+#all:target ~ .Root .Hamburger a[href="#all"],
+#all:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#all"] {
   background-color: #9575CD;
   font-weight: bold;
 }
 #networking:target ~ .Root .Title:after {
   content: 'Networking';
 }
-a[href="#networking"]:after {
+.Hamburger a[href="#networking"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#networking"]:after {
   content: 'Networking';
 }
-#networking:target ~ .Root a[href="#networking"] {
+#networking:target ~ .Root .Hamburger a[href="#networking"],
+#networking:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#networking"] {
   background-color: #9575CD;
   font-weight: bold;
 }
 #languages:target ~ .Root .Title:after {
   content: 'Languages';
 }
-a[href="#languages"]:after {
+.Hamburger a[href="#languages"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#languages"]:after {
   content: 'Languages';
 }
-#languages:target ~ .Root a[href="#languages"] {
+#languages:target ~ .Root .Hamburger a[href="#languages"],
+#languages:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#languages"] {
   background-color: #9575CD;
   font-weight: bold;
 }
 #software:target ~ .Root .Title:after {
   content: 'Software';
 }
-a[href="#software"]:after {
+.Hamburger a[href="#software"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#software"]:after {
   content: 'Software';
 }
-#software:target ~ .Root a[href="#software"] {
+#software:target ~ .Root .Hamburger a[href="#software"],
+#software:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#software"] {
   background-color: #9575CD;
   font-weight: bold;
 }
 #algorithms:target ~ .Root .Title:after {
   content: 'Algorithms';
 }
-a[href="#algorithms"]:after {
+.Hamburger a[href="#algorithms"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#algorithms"]:after {
   content: 'Algorithms';
 }
-#algorithms:target ~ .Root a[href="#algorithms"] {
+#algorithms:target ~ .Root .Hamburger a[href="#algorithms"],
+#algorithms:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#algorithms"] {
   background-color: #9575CD;
   font-weight: bold;
 }
 #hardware:target ~ .Root .Title:after {
   content: 'Hardware';
 }
-a[href="#hardware"]:after {
+.Hamburger a[href="#hardware"]:after,
+.CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#hardware"]:after {
   content: 'Hardware';
 }
-#hardware:target ~ .Root a[href="#hardware"] {
+#hardware:target ~ .Root .Hamburger a[href="#hardware"],
+#hardware:target ~ .Root .CategoryTarget:target ~ .Root .Hamburger a[href="#"][href="#hardware"] {
   background-color: #9575CD;
   font-weight: bold;
 }
@@ -221,6 +233,8 @@ a[href="#hardware"]:after {
   height: 100%;
   top: 0;
   left: 0;
+  padding: 32px;
+  box-sizing: border-box;
   background: white;
   -webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -233,6 +247,10 @@ a[href="#hardware"]:after {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -241,6 +259,9 @@ a[href="#hardware"]:after {
 }
 .CategoryTarget:target ~ .Root .AboutPage {
   top: -100%;
+}
+.AboutPage p {
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=shell.css.map */

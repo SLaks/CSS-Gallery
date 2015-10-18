@@ -123,11 +123,11 @@ header {
 	#@{id}:target ~ .Root .Title:after {
 		content: @displayName;
 	}
-	a[href="#@{id}"]:after {
+	.Hamburger a[href="#@{id}"]:after {
 		content: @displayName;
 	}
 
-	#@{id}:target ~ .Root a[href="#@{id}"] {
+	#@{id}:target ~ .Root .Hamburger a[href="#@{id}"] {
 		background-color: #9575CD;
 		font-weight: bold;
 	}
@@ -160,16 +160,22 @@ header {
 	height: 100%;
 	top: 0;
 	left: 0;
+	padding: 32px;
+	box-sizing: border-box;
 	background: white;
 	transition: top @transition;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	text-align: center;
-
 	// When any category is selected, hide this page.
 	.CategoryTarget:target ~ .Root & {
 		top: -100%;
+	}
+
+	p {
+		max-width: 800px;
 	}
 }
 
