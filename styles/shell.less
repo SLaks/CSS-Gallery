@@ -179,3 +179,49 @@ header {
 	}
 }
 
+
+.IconList {
+	@width: 24px;
+	@focusWidth: @width * 1.5;
+
+	position: fixed;
+	bottom: 32px;
+	z-index: 100;
+	right: 32px - (@focusWidth - @width) / 2;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: flex;
+		align-items: center;
+		margin-left: 6px;
+		// Give the icon enough room to grow when focused
+		width: @focusWidth;
+		height: 32px;
+
+		svg {
+			opacity: .7;
+			display: block;
+			width: @width;
+			transition: opacity @transition, width @transition, margin-left @transition;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		&:focus {
+			outline: none;
+
+			svg {
+				opacity: 1;
+				// Move the icon to the left so that it stays centered
+				margin-left: -(@focusWidth - @width) / 2;
+				width: @focusWidth;
+			}
+		}
+	}
+}
